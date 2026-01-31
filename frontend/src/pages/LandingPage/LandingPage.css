@@ -1,0 +1,30 @@
+.landingPageBg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    filter: blur(3px) brightness(0.6) contrast(1.02);
+    scale: 1.2;
+    top: 0;
+    left: 0;
+}
+
+.landingPageStartBg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    filter: blur(4px) brightness(0.6) contrast(1.02);
+    scale: 1.2;
+    top: 0;
+    left: 0;
+}
+
+.haLogoLanding {
+    width: 75%;
+    max-width: 400px;
+    margin: 20px auto 40px;
+    display: block;
+}

@@ -1,0 +1,630 @@
+openapi: 3.0.3
+info:
+  title: Ecommerce Portfolio Project
+  description: |-
+    This is a simple ecommerce application API developed in the scope of the codecademy Full Stack Engineer Path.
+    It is meant to serve as a learning opportunity to exercise and deepen the backend development knowledge acquired during the course.
+  contact:
+    email: marcus.strauch@onmail.com 
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000/
+paths:
+  /auth/signup:
+    post:
+      tags:
+        - auth
+      summary: Register a new user
+      description: ''
+      operationId: signUp
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+                userName:
+                  type: string
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+              required:
+                - email
+                - password
+                - userName
+      responses:
+        200:
+          description: 200 Success
+          schema:
+            type: object
+            items:
+        409:
+          description: 409 Conflict, E-Mail address is already used
+        500:
+          description: 500 Internal Server Error
+  /auth/login:
+    post:
+      tags:
+        - auth
+      summary: Log in an existing user
+      description: ''
+      operationId: logIn
+      requestBody:
+        description:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userName:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '401':
+          description: Password or E-Mail not recognized. Try again.
+  /users:
+    get:
+      tags:
+        - users
+      summary: Get all existing users
+      description: ''
+      operationId: getUsers
+  /users{id}:
+    get:
+      tags:
+        - users
+      summary: Get a single user by userId
+      description: ''
+      operationId: getUser
+      parameters:
+        - name: id
+          in: path
+          description: The userId that needs to be fetched
+          required: true
+          schema:
+            type: string
+    put:
+      tags:
+        - users
+      summary: Update a single user by userId
+      description: ''
+      operationId: updateUser
+      parameters:
+        - name: id
+          in: path
+          description: The userId to be updated
+          required: true
+          schema:
+            type: string
+    delete:
+      tags:
+        - users
+      summary: Remove a single user by userId
+      description: ''
+      operationId: removeUser
+      parameters:
+        - name: id
+          in: path
+          description: The userId to be removed
+          required: true
+          schema:
+            type: string
+  /carts:
+    get:
+      tags:
+        - carts
+      summary: Get all carts in shop
+      description: ''
+      operationId: getCarts
+    post:
+      tags:
+        - carts
+      summary: Create a new cart
+      description: ''
+      operationId: postCart
+      requestBody:
+        description:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+      responses:
+        '401':
+          description: Password or E-Mail not recognized. Try again.
+  /carts/{id}:
+    get:
+      tags:
+        - carts
+      summary: Get a single cart by cartId
+      description: ''
+      operationId: getCart
+      parameters:
+        - name: id
+          in: path
+          description: The cartId that needs to be fetched
+          required: true
+          schema:
+            type: string
+    put:
+      tags:
+        - carts
+      summary: Update an existing cart
+      description: ''
+      operationId: updateCart
+      parameters:
+        - name: id
+          in: path
+          description: The cartId to be updated
+          required: true
+          schema:
+            type: string
+    delete:
+      tags:
+        - carts
+      summary: Remove a single cart by cartId
+      description: ''
+      operationId: deleteCart
+      parameters:
+        - name: id
+          in: path
+          description: The cartId to be removed
+          required: true
+          schema:
+            type: string
+  /carts/{id}/items:
+    get:
+      tags:
+        - carts
+      summary: Get all items for a single cart by cartId
+      description: ''
+      operationId: getCartItems
+      parameters:
+        - name: id
+          in: path
+          description: The cartId whose items need to be fetched
+          required: true
+          schema:
+            type: string
+    post:
+      tags:
+        - carts
+      summary: Add items to a cart by cartId
+      description: ''
+      operationId: postCartItems
+      parameters:
+        - name: id
+          in: path
+          description: The cartId which items are added to
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId:
+                  type: string
+                quantity:
+                  type: integer
+      responses:
+        '401':
+          description: Password or E-Mail not recognized. Try again.
+    delete:
+      tags:
+        - carts
+      summary: Remove items from a cart by cartId
+      description: ''
+      operationId: removeCartItems
+      parameters:
+        - name: id
+          in: path
+          description: The cartId which items are removed from
+          required: true
+          schema:
+            type: string
+  /carts/{id}/checkout:
+    post:
+      tags:
+        - carts
+      summary: Check out a single cart by cartId and place an order with the respective cart items
+      description: ''
+      operationId: checkoutCart
+      parameters:
+        - name: id
+          in: path
+          description: The cartId which is to be checked out
+          required: true
+          schema:
+            type: string
+  /orders:
+    get:
+      tags:
+        - orders
+      summary: Get all existing orders
+      description: ''
+      operationId: getOrders
+    post:
+      tags:
+        - orders
+      summary: Create a new order
+      description: ''
+      operationId: postOrders
+      requestBody:
+        description:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+  /orders/{id}:
+    get:
+      tags:
+        - orders
+      summary: Get a single order by orderId
+      description: ''
+      operationId: getOrder
+      parameters:
+        - name: id
+          in: path
+          description: The orderId which needs to be fetched
+          required: true
+          schema:
+            type: string
+    put:
+      tags:
+        - orders
+      summary: Update a single order by orderId
+      description: ''
+      operationId: updateOrder
+      parameters:
+        - name: id
+          in: path
+          description: The orderId to be updated
+          required: true
+          schema:
+            type: string
+    delete:
+      tags:
+        - orders
+      summary: Remove a single order by orderId
+      description: ''
+      operationId: deleteOrder
+      parameters:
+        - name: id
+          in: path
+          description: The orderId to be removed
+          required: true
+          schema:
+            type: string
+  /orders/{id}/items:
+    get:
+      tags:
+        - orders
+      summary: Get all items for a single order by orderId
+      description: ''
+      operationId: getOrderItems
+      parameters:
+        - name: id
+          in: path
+          description: The orderId whose items need to be fetched
+          required: true
+          schema:
+            type: string
+    post:
+      tags:
+        - orders
+      summary: Add items to a single order by orderId
+      description: ''
+      operationId: postOrderItems
+      parameters:
+        - name: id
+          in: path
+          description: The orderId which items are added to
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId:
+                  type: string
+                quantity:
+                  type: integer                        
+    delete:
+      tags:
+        - orders
+      summary: Remove items from a single order by orderId
+      description: ''
+      operationId: deleteOrderItems
+      parameters:
+        - name: id
+          in: path
+          description: The orderId which items are removed from
+          required: true
+          schema:
+            type: string
+  /products:
+    get:
+      tags:
+        - products
+      summary: Get all existing products
+      description: ''
+      operationId: getProducts
+    post:
+      tags:
+        - products
+      summary: Create a new product
+      description: ''
+      operationId: postProduct
+      requestBody:
+        description:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                unit_price:
+                  type: float
+                in_stock:
+                  type: integer       
+  /products/{id}:
+    get:
+      tags:
+        - products
+      summary: Get a single product by productId
+      description: ''
+      operationId: getProduct
+      parameters:
+        - name: id
+          in: path
+          description: The productId that needs to be fetched
+          required: true
+          schema:
+            type: string
+    put:
+      tags:
+        - products
+      summary: Update a single product by productId
+      description: ''
+      operationId: updateProduct
+      parameters:
+        - name: id
+          in: path
+          description: The productId to update
+          required: true
+          schema:
+            type: string
+    delete:
+      tags:
+        - products
+      summary: Remove a single product by productId
+      description: ''
+      operationId: deleteProduct
+      parameters:
+        - name: id
+          in: path
+          description: The productId to delete
+          required: true
+          schema:
+            type: string
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        petId:
+          type: integer
+          format: int64
+          example: 198772
+        quantity:
+          type: integer
+          format: int32
+          example: 7
+        shipDate:
+          type: string
+          format: date-time
+        status:
+          type: string
+          description: Order Status
+          example: approved
+          enum:
+            - placed
+            - approved
+            - delivered
+        complete:
+          type: boolean
+      xml:
+        name: order
+    Customer:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 100000
+        userName:
+          type: string
+          example: fehguy
+        address:
+          type: array
+          xml:
+            name: addresses
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Address'
+      xml:
+        name: customer
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          example: 437 Lytton
+        city:
+          type: string
+          example: Palo Alto
+        state:
+          type: string
+          example: CA
+        zip:
+          type: string
+          example: '94301'
+      xml:
+        name: address
+    Category:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        name:
+          type: string
+          example: Dogs
+      xml:
+        name: category
+    User:
+      type: object
+      properties:
+        userName:
+          type: string
+          example: theUser
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: James
+        email:
+          type: string
+          example: john@email.com
+        password:
+          type: string
+          example: '12345'
+      xml:
+        name: user
+    Tag:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+      xml:
+        name: tag
+    Pet:
+      required:
+        - name
+        - photoUrls
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        name:
+          type: string
+          example: doggie
+        category:
+          $ref: '#/components/schemas/Category'
+        photoUrls:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            type: string
+            xml:
+              name: photoUrl
+        tags:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Tag'
+        status:
+          type: string
+          description: pet status in the store
+          enum:
+            - available
+            - pending
+            - sold
+      xml:
+        name: pet
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+      xml:
+        name: '##default'
+  requestBodies:
+    Pet:
+      description: Pet object that needs to be added to the store
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Pet'
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/Pet'
+    UserArray:
+      description: List of user object
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/User'
+  securitySchemes:
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://petstore3.swagger.io/oauth/authorize
+          scopes:
+            write:pets: modify pets in your account
+            read:pets: read your pets
+  responses:
+    UserResponse:
+      description: Information regarding the requested user.
+      content:
+        application/json:
