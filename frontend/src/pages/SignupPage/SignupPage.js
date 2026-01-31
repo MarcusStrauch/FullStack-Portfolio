@@ -26,7 +26,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Holzarsenal
+        Marcus Strauch
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -304,7 +304,7 @@ export const SignupPage = () => {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+        {/* <Copyright sx={{ mt: 5 }} /> */}
       </Container>
     </AnimatedPage>
   );
