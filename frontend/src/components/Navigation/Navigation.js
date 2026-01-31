@@ -249,7 +249,7 @@ export const Navigation = ({
                 onClick={handleOpenProductMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                Produkte
+                Products
               </Button>
               <Menu
                 sx={{ mt: "45px" }}

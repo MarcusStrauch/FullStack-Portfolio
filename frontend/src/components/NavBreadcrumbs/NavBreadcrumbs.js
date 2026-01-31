@@ -97,7 +97,7 @@ export const NavBreadcrumbs = ({ location, productCategories }) => {
               </Breadcrumbs>
             </Paper>
             <Button onClick={handleBackButtonPress} variant="contained">
-              Zurück
+              Back
             </Button>
           </Container>
         </m.div>

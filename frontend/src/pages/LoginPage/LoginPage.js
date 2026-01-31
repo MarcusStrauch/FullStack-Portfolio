@@ -154,7 +154,7 @@ export const LoginPage = () => {
               required
               fullWidth
               id="username"
-              label="Nutzername"
+              label="Username"
               name="username"
               autoComplete="username"
             />
