@@ -56,14 +56,13 @@ passport.use(
 
         if (!accountData) {
           const newUuid = uuidv4();
-          console.log('profileImg:', picture, typeof picture);
 
           accountData = await userModel.create({
             userId: newUuid,
             userName: name,
             firstName: given_name,
             lastName: family_name,
-            profileImg: picture,
+            profileImg: JSON.stringify({ url: picture }),
             google: JSON.stringify({ id: sub, displayName: name }),
           });
         }
