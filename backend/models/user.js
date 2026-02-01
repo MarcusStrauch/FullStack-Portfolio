@@ -104,7 +104,8 @@ const create = async (props) => {
 
     return null;
   } catch (err) {
-    throw new Error(err);
+    err.message = `User create failed: ${err.message}`;
+    throw err;
   }
 };
 

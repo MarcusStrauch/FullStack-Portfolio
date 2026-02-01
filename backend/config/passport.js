@@ -56,6 +56,7 @@ passport.use(
 
         if (!accountData) {
           const newUuid = uuidv4();
+          console.log('profileImg:', picture, typeof picture);
 
           accountData = await userModel.create({
             userId: newUuid,
