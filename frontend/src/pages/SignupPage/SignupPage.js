@@ -16,24 +16,6 @@ import { AnimatedPage } from "../../components/AnimatedPage/AnimatedPage";
 import { signUp } from "../../features/user/userSliceThunks";
 import validator from "validator";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Marcus Strauch
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
 export const SignupPage = () => {
   const [userName, setUserName] = React.useState({
     value: "",
@@ -304,7 +286,6 @@ export const SignupPage = () => {
             </Grid>
           </Box>
         </Box>
-        {/* <Copyright sx={{ mt: 5 }} /> */}
       </Container>
     </AnimatedPage>
   );

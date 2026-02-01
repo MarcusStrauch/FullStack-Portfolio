@@ -10,7 +10,7 @@ const {
 productsRouter.param("id", checkProductId);
 
 productsRouter.route("/").get(getProducts);
-productsRouter.route("/categories").get(getProductCategories);
+productsRouter.route("/categories").get(getProductCategories)
 
 productsRouter.route("/:id").get(getProduct);
 
