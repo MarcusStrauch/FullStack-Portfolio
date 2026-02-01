@@ -14,7 +14,7 @@ passport.use(
     try {
       const accountData = await userModel.findByUserName(username);
 
-      if (accountData === null || accountData === [] || !accountData) {
+      if (accountData === null || accountData == [] || !accountData) {
         return done(null, false, {
           message: "Nutzername oder Passwort inkorrekt",
         });
@@ -38,7 +38,7 @@ passport.use(
     } catch (err) {
       return done(err);
     }
-  })
+  }),
 );
 
 passport.use(
@@ -63,7 +63,7 @@ passport.use(
             firstName: given_name,
             lastName: family_name,
             profileImg: picture,
-            google: { id: sub, displayName: name },
+            google: JSON.stringify({ id: sub, displayName: name }),
           });
         }
 
@@ -71,8 +71,8 @@ passport.use(
       } catch (err) {
         return done(err);
       }
-    }
-  )
+    },
+  ),
 );
 
 passport.serializeUser((user, done) => {
