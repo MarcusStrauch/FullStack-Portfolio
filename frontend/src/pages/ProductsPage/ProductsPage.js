@@ -1,1 +1,1 @@
-export const ProductPage = ({  }) => {}
+export const ProductsPage = ({  }) => {}
