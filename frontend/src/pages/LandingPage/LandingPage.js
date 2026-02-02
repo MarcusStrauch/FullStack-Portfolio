@@ -6,7 +6,7 @@ import { Link as RouterLink } from "react-router-dom";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import haLogo from "../../assets/haLogo.webp";
+import woodstack_logo from "../../assets/woodstack_logo.png";
 
 const landingPageScrollContainerStyles = {
   scrollSnapAlign: "start",
@@ -51,7 +51,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               mt: 8,
               fontFamily: "monospace",
               fontWeight: 700,
-              fontSize: "1.75rem",
+              fontSize: "3rem",
               letterSpacing: ".3rem",
               color: "#fff",
               textDecoration: "none",
@@ -60,7 +60,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               textAlign: "left",
             }}
           >
-            DAS HOLZARSENAL
+            Woodstack
           </Typography>
           <Typography
             sx={{
@@ -75,7 +75,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               textAlign: "left",
             }}
           >
-            Praktisches und Interessantes rund ums Holz
+            Delightful, handcrafted wood products
           </Typography>
           <Button
             variant="contained"
@@ -88,7 +88,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
             }}
           >
             <ArrowRightIcon fontSize="large" />
-            Alle Produkte
+            See our catalog!
           </Button>
         </Container>
         <Container
@@ -100,18 +100,17 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
             padding: "10px",
           }}
         >
-          <img src={haLogo} alt="Holzarsenal logo" className="haLogoLanding" />
+          <img src={woodstack_logo} alt="Holzarsenal logo" className="woodstackLogoLanding" />
           <Typography
             sx={{ textAlign: "center", fontSize: "1.15rem", padding: "0 10px" }}
           >
-            Leim?
-            <br /> Kleber?
-            <br /> Ein Pflegeöl für den Küchentisch?
-            <br /> Ein schöner handgefertigter Hocker?
-            <br /> Eine einzigartige und praktische Lampe?
-            <br />
-            Ein kleiner Rahmen oder etwas zum Basteln als Geschenk für Ihre
-            Liebsten?
+            Glue?
+            <br />Adhesive?
+            <br />A nourishing oil for your kitchen table?
+            <br />A beautifully handcrafted stool?
+            <br />A unique and practical lamp?
+
+            Or perhaps a small frame or a creative DIY gift for someone you love?
           </Typography>
           <Typography
             sx={{
@@ -123,7 +122,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               fontSize: "1.2rem",
             }}
           >
-            <ChevronRightIcon /> Das gibt es hier beim Holzarsenal{" "}
+            <ChevronRightIcon /> Get it in our Woodstack store!{" "}
             <ChevronLeftIcon />
           </Typography>
         </Container>

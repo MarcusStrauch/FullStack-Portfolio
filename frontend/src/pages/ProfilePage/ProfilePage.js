@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 
 export const ProfilePage = ({ user }) => {
-  console.log(user);
   return (
     <Container component={Paper} sx={{ px: 3, py: 2 }} maxWidth="sm">
       {user.userName ? (
