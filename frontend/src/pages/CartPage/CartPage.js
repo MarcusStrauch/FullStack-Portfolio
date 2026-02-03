@@ -208,7 +208,7 @@ export const CartPage = ({ logInStatus, cart, mergeCartStatus }) => {
             })
           ) : (
             <Paper sx={{p: 2}}>
-              <Typography component="h2" variant="h5">Der Warenkorb ist leer.</Typography>
+              <Typography component="h2" variant="h5">Cart is empty</Typography>
             </Paper>
           )}
         </Grid>

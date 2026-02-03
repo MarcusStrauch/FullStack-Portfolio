@@ -20,7 +20,7 @@ export const NavBreadcrumbs = ({ location, productCategories }) => {
   const [breadcrumbNameMap, setBreadcrumbNameMap] = useState({
     products: "Products",
     cart: "Cart",
-    me: "Profil",
+    me: "Profile",
     login: "Log In",
     signup: "Sign Up",
     search: "Search",

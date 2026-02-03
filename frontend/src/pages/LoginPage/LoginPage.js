@@ -21,23 +21,6 @@ import { Link as RouterLink } from "react-router-dom";
 import { AnimatedPage } from "../../components/AnimatedPage/AnimatedPage";
 import { logIn } from "../../features/user/userSliceThunks";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Holzarsenal
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 export const LoginPage = () => {
   const [userName, setUserName] = React.useState({
@@ -199,7 +182,6 @@ export const LoginPage = () => {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </AnimatedPage>
   );

@@ -303,7 +303,7 @@ export const Navigation = ({
             {logInStatus.loggedIn ? (
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip
-                  title="Suche"
+                  title="Search"
                   sx={{ display: { xs: "block", md: "none" } }}
                 >
                   <IconButton
@@ -315,8 +315,8 @@ export const Navigation = ({
                     </Avatar>
                   </IconButton>
                 </Tooltip>
-                <Tooltip title="Warenkorb">
-                  <Link component={RouterLink} to="/warenkorb">
+                <Tooltip title="Cart">
+                  <Link component={RouterLink} to="/cart">
                     <IconButton sx={{ p: 0, mr: "8px" }}>
                       {Object.keys(cart.products).length ? (
                         <Badge
@@ -328,7 +328,7 @@ export const Navigation = ({
                           badgeContent={
                             <SmallAvatar
                               sx={{ fontSize: "1rem", color: "black" }}
-                              alt="Anzahl Waren"
+                              alt="Cart Items"
                             >
                               {Object.keys(cart.products).length
                                 ? String(Object.keys(cart.products).length)
@@ -348,7 +348,7 @@ export const Navigation = ({
                     </IconButton>
                   </Link>
                 </Tooltip>
-                <Tooltip title="Account Menü">
+                <Tooltip title="Account Menu">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Avatar
                       alt={user.userName}
@@ -420,8 +420,8 @@ export const Navigation = ({
               <Skeleton variant="circular" width={40} height={40} />
             ) : (
               <Box>
-                <Tooltip title="Warenkorb">
-                  <Link component={RouterLink} to="/warenkorb">
+                <Tooltip title="Cart">
+                  <Link component={RouterLink} to="/cart">
                     <IconButton sx={{ p: 0, mr: "10px" }}>
                       {Object.keys(cart.products).length ? (
                         <Badge
@@ -433,7 +433,7 @@ export const Navigation = ({
                           badgeContent={
                             <SmallAvatar
                               sx={{ fontSize: "1rem", color: "black" }}
-                              alt="Anzahl Waren"
+                              alt="Cart Items"
                             >
                               {Object.keys(cart.products).length
                                 ? String(Object.keys(cart.products).length)
