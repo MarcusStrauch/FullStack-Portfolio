@@ -1,9 +1,7 @@
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { useSelector } from "react-redux";
 import { selectProductsByCategory } from "../../features/product/productSlice";
 import { Link as RouterLink } from "react-router-dom";
+import { ImageList, ImageListItem, ImageListItemBar, Link } from "@mui/material";
 
 export const ProductList = ({ category }) => {
   const categoryProducts = useSelector((state) =>
