@@ -10,7 +10,7 @@ export const ProductsPage = () => {
 
   return (
     <Container sx={{ mt: 2 }}>
-      <Paper sx={{ width: "fit-content" }} elevation={4}>
+      <Paper sx={{ width: "100%", p: 2 }} elevation={4}>
         {categories.map((category) => {
           return (
             <div key={category.productCategoryId} className="productListContainer">
@@ -18,7 +18,7 @@ export const ProductsPage = () => {
                 {category.title}
               </Typography>
               <Divider sx={{ mt: 1, mb: 2 }} />
-              <ProductList productCategoryId={category.productCategoryId} />
+              <ProductList category={category} />
             </div>
           );
         })}

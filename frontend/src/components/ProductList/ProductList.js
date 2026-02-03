@@ -3,26 +3,38 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { useSelector } from "react-redux";
 import { selectProductsByCategory } from "../../features/product/productSlice";
+import { Link as RouterLink } from "react-router-dom";
 
-export const ProductList = ({ productCategoryId }) => {
+export const ProductList = ({ category }) => {
   const categoryProducts = useSelector((state) =>
-    selectProductsByCategory(state, productCategoryId),
+    selectProductsByCategory(state, category.productCategoryId),
   );
 
   return (
-    <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+    <ImageList sx={{ width: "100%" }} cols={3} rowHeight={300}>
       {categoryProducts.map((product) => (
-        <ImageListItem key={product.productId}>
-          <img
-            src={`${product.images["main"]}`}
-            alt={product.name}
-            loading="lazy"
-          />
-          <ImageListItemBar
-            title={product.name}
-            subtitle={product.description}
-          />
-        </ImageListItem>
+        <Link
+          component={RouterLink}
+          to={`/products/${category.name}/${product.productId}`}
+          sx={{
+            textDecoration: "none",
+            height: "100%",
+            width: "100%",
+            display: "flex",
+          }}
+        >
+          <ImageListItem key={product.productId}>
+            <img
+              src={`${product.images["main"]}`}
+              alt={product.name}
+              loading="lazy"
+            />
+            <ImageListItemBar
+              title={product.name}
+              subtitle={product.description}
+            />
+          </ImageListItem>
+        </Link>
       ))}
     </ImageList>
   );
