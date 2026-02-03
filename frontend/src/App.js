@@ -120,11 +120,11 @@ function App() {
               <Route path="login" element={<LoginPage />} />
               <Route path="signup" element={<SignupPage />} />
               <Route
-                path="suche"
+                path="search"
                 element={<SearchPage productCategories={productCategories} />}
               />
               <Route
-                path="warenkorb"
+                path="cart"
                 element={
                   <CartPage
                     mergeCartStatus={{ pending: false }}
@@ -139,7 +139,7 @@ function App() {
                 <Route path="me">
                   <Route index element={<ProfilePage user={user} />} />
                   <Route
-                    path="bestellungen"
+                    path="orders"
                     element={<OrdersPage user={user} />}
                   />
                 </Route>
@@ -148,7 +148,7 @@ function App() {
                   element={<CheckoutPage user={user} cart={cart} />}
                 />
               </Route>
-              <Route path="produkte">
+              <Route path="products">
                 <Route index element={<ProductsPage />} />
                 <Route path=":category" element={<CategoryPage />} />
                 <Route

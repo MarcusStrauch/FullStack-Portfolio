@@ -42,7 +42,7 @@ export const SearchPage = ({ productCategories }) => {
                       <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                         <Link
                           component={RouterLink}
-                          to={`/produkte/${category?.name}/${product?.productId}`}
+                          to={`/products/${category?.name}/${product?.productId}`}
                           sx={{
                             textDecoration: "none",
                             height: "100%",

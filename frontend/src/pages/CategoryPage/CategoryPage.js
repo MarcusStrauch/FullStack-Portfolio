@@ -49,7 +49,7 @@ export const CategoryPage = () => {
             <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
               <Link
                 component={RouterLink}
-                to={`/produkte/${categoryData?.name}/${product?.productId}`}
+                to={`/products/${categoryData?.name}/${product?.productId}`}
                 sx={{
                   textDecoration: "none",
                   height: "100%",

@@ -273,7 +273,7 @@ export const Navigation = ({
                       key={category.name}
                       onClick={handleCloseProductMenu}
                       component={RouterLink}
-                      to={`/produkte/${category.name}`}
+                      to={`/products/${category.name}`}
                     >
                       <Typography textAlign="center">
                         {category.title}
@@ -494,7 +494,7 @@ export const Navigation = ({
             <ListItemIcon>
               <CategoryIcon />
             </ListItemIcon>
-            <ListItemText primary="Produkte" />
+            <ListItemText primary="Products" />
             {expandProducts ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={expandProducts} timeout="auto">
@@ -503,7 +503,7 @@ export const Navigation = ({
                 productCategories.map((category, index) => (
                   <ListItemButton
                     component={RouterLink}
-                    to={`/produkte/${category.name}`}
+                    to={`/products/${category.name}`}
                     sx={{ pl: 6 }}
                     key={index}
                   >

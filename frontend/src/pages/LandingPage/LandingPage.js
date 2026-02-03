@@ -80,7 +80,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
           <Button
             variant="contained"
             component={RouterLink}
-            to="/produkte"
+            to="/products"
             sx={{
               ml: 6,
               mt: 8,
@@ -108,9 +108,8 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
             <br />Adhesive?
             <br />A nourishing oil for your kitchen table?
             <br />A beautifully handcrafted stool?
-            <br />A unique and practical lamp?
-
-            Or perhaps a small frame or a creative DIY gift for someone you love?
+            <br />A unique and practical lamp? 
+            <br />Or perhaps a small frame or a creative DIY gift for someone you love?
           </Typography>
           <Typography
             sx={{
@@ -173,7 +172,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
                 <Button
                   variant="contained"
                   component={RouterLink}
-                  to={`/produkte/${category.name}`}
+                  to={`/products/${category.name}`}
                   sx={{
                     fontSize: "1.5rem",
                     position: "absolute",

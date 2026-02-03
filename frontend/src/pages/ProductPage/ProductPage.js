@@ -139,7 +139,7 @@ export const ProductPage = ({ logInStatus }) => {
                   width: { xs: "90%", sm: "auto" },
                 }}
               >
-                In den Warenkorb
+                Add to cart
               </Button>
             </Grid>
           </Grid>
