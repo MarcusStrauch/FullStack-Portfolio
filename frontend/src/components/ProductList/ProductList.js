@@ -1,7 +1,12 @@
 import { useSelector } from "react-redux";
 import { selectProductsByCategory } from "../../features/product/productSlice";
 import { Link as RouterLink } from "react-router-dom";
-import { ImageList, ImageListItem, ImageListItemBar, Link } from "@mui/material";
+import {
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  Link,
+} from "@mui/material";
 
 export const ProductList = ({ category }) => {
   const categoryProducts = useSelector((state) =>
@@ -9,7 +14,7 @@ export const ProductList = ({ category }) => {
   );
 
   return (
-    <ImageList sx={{ width: "100%" }} cols={3} rowHeight={300}>
+    <ImageList sx={{ width: "100%" }} cols={4} rowHeight={300}>
       {categoryProducts.map((product) => (
         <Link
           component={RouterLink}
@@ -19,6 +24,7 @@ export const ProductList = ({ category }) => {
             height: "100%",
             width: "100%",
             display: "flex",
+            overflow: "hidden",
           }}
         >
           <ImageListItem key={product.productId}>
