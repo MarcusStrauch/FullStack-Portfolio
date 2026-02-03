@@ -18,13 +18,13 @@ export const NavBreadcrumbs = ({ location, productCategories }) => {
 
   const pathnames = location.pathname.split("/").filter((x) => x);
   const [breadcrumbNameMap, setBreadcrumbNameMap] = useState({
-    produkte: "Produkte",
-    warenkorb: "Warenkorb",
+    products: "Products",
+    cart: "Cart",
     me: "Profil",
     login: "Log In",
     signup: "Sign Up",
-    suche: "Suche",
-    bestellungen: "Bestellungen",
+    search: "Search",
+    Orders: "Orders",
     checkout: "Checkout",
   });
 
