@@ -135,6 +135,9 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               sx={{
                 ...landingPageScrollContainerStyles,
                 height: "35vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 borderBottom:
                   index === productCategories.length - 1 ? "" : "4px solid",
               }}
@@ -149,11 +152,11 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
                 component={Paper}
                 elevation={4}
                 sx={{
-                  position: "relative",
                   margin: "20px",
                   padding: "25px",
+                  width: "100%",
                   background: "#00000075",
-                  height: "calc(20vh)",
+                  height: "20vh",
                 }}
               >
                 <Button
