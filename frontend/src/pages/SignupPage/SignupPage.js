@@ -83,13 +83,13 @@ export const SignupPage = () => {
 
   React.useEffect(() => {
     if (userName.value) {
-      let lengthCheck = validator.isLength(userName.value, { min: 3, max: 40 });
+      let lengthCheck = validator.isLength(userName.value, { min: 5, max: 40 });
       setUserName((prev) => ({
         ...prev,
         error: !lengthCheck,
         errorMessage: lengthCheck
           ? ""
-          : "Nutzername sollte mindestens 3 Zeichen enthalten",
+          : "Username should be at least 5 characters long",
       }));
     } else {
       setUserName((prev) => ({ ...prev, error: false, errorMessage: "" }));
@@ -98,13 +98,13 @@ export const SignupPage = () => {
 
   React.useEffect(() => {
     if (email.value) {
-      let lengthCheck = validator.isLength(email.value, { min: 3, max: 40 });
+      let lengthCheck = validator.isLength(email.value, { min: 5, max: 40 });
       setEmail((prev) => ({
         ...prev,
         error: !lengthCheck,
         errorMessage: lengthCheck
           ? ""
-          : "E-Mail sollte mindestens 3 Zeichen enthalten",
+          : "Enter a valid email address",
       }));
     } else {
       setEmail((prev) => ({ ...prev, error: false, errorMessage: "" }));
@@ -113,13 +113,13 @@ export const SignupPage = () => {
 
   React.useEffect(() => {
     if (lastName.value) {
-      let lengthCheck = validator.isLength(lastName.value, { min: 3, max: 40 });
+      let lengthCheck = validator.isLength(lastName.value, { min: 2, max: 40 });
       setLastName((prev) => ({
         ...prev,
         error: !lengthCheck,
         errorMessage: lengthCheck
           ? ""
-          : "Nachname sollte mindestens 3 Zeichen enthalten",
+          : "Surname should be at least 2 characters long",
       }));
     } else {
       setLastName((prev) => ({ ...prev, error: false, errorMessage: "" }));
@@ -129,7 +129,7 @@ export const SignupPage = () => {
   React.useEffect(() => {
     if (firstName.value) {
       let lengthCheck = validator.isLength(firstName.value, {
-        min: 3,
+        min: 2,
         max: 40,
       });
       setFirstName((prev) => ({
@@ -137,7 +137,7 @@ export const SignupPage = () => {
         error: !lengthCheck,
         errorMessage: lengthCheck
           ? ""
-          : "Vorname sollte mindestens 3 Zeichen enthalten",
+          : "Forename should be at least 2 characters long",
       }));
     } else {
       setFirstName((prev) => ({ ...prev, error: false, errorMessage: "" }));
@@ -155,7 +155,7 @@ export const SignupPage = () => {
         error: !lengthCheck,
         errorMessage: lengthCheck
           ? ""
-          : "Passwort sollte mindestens 6 Zeichen enthalten",
+          : "Password should be at least 6 characters long",
       }));
     } else {
       setPassword((prev) => ({ ...prev, error: false, errorMessage: "" }));
@@ -200,7 +200,7 @@ export const SignupPage = () => {
                   name="firstName"
                   fullWidth
                   id="firstName"
-                  label="Vorname"
+                  label="Forename"
                   autoFocus
                 />
               </Grid>
@@ -214,7 +214,7 @@ export const SignupPage = () => {
                   helperText={lastName.errorMessage}
                   fullWidth
                   id="lastName"
-                  label="Nachname"
+                  label="Surname"
                   name="lastName"
                   autoComplete="family-name"
                 />
@@ -230,7 +230,7 @@ export const SignupPage = () => {
                   fullWidth
                   required
                   id="userName"
-                  label="Nutzername"
+                  label="Username"
                   name="userName"
                   autoComplete="username"
                 />
@@ -246,7 +246,7 @@ export const SignupPage = () => {
                   required
                   fullWidth
                   id="email"
-                  label="E-Mail Adresse"
+                  label="E-Mail Address"
                   name="email"
                   autoComplete="email"
                 />
@@ -262,7 +262,7 @@ export const SignupPage = () => {
                   required
                   fullWidth
                   name="password"
-                  label="Passwort"
+                  label="Password"
                   type="password"
                   id="password"
                   autoComplete="new-password"

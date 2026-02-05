@@ -22,8 +22,8 @@ export const ProfilePage = ({ user }) => {
         <Skeleton />
       )}
       <Divider sx={{mb: 2}} />
-      {user.firstName && <Typography>Vorname: {user.firstName}</Typography>}
-      {user.lastName && <Typography>Nachname: {user.lastName}</Typography>}
+      {user.firstName && <Typography>Forename: {user.firstName}</Typography>}
+      {user.lastName && <Typography>Surname: {user.lastName}</Typography>}
     </Container>
   );
 };

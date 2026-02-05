@@ -39,13 +39,13 @@ export const LoginPage = () => {
 
   React.useEffect(() => {
     if (userName.value) {
-      let lengthCheck = validator.isLength(userName.value, { min: 3, max: 40 });
+      let lengthCheck = validator.isLength(userName.value, { min: 5, max: 40 });
       setUserName((prev) => ({
         ...prev,
         error: !lengthCheck,
         errorMessage: lengthCheck
           ? ""
-          : "Nutzername sollte mindestens 3 Zeichen enthalten",
+          : "Username should be at least 5 characters long",
       }));
     } else {
       setUserName((prev) => ({ ...prev, error: false, errorMessage: "" }));
@@ -63,7 +63,7 @@ export const LoginPage = () => {
         error: !lengthCheck,
         errorMessage: lengthCheck
           ? ""
-          : "Passwort sollte mindestens 6 Zeichen enthalten",
+          : "Password should be at least 6 characters long",
       }));
     } else {
       setPassword((prev) => ({ ...prev, error: false, errorMessage: "" }));

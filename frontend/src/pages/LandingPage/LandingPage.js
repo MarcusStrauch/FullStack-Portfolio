@@ -138,7 +138,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               }}
             >
               <img
-                alt="xd"
+                alt={category.name}
                 key={category.productCategoryId}
                 src={category.images.main}
                 className="landingPageBg"
@@ -151,7 +151,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
                   margin: "20px",
                   padding: "10px",
                   background: "#00000075",
-                  height: "calc(100vh - 180px)",
+                  height: "calc(20vh)",
                 }}
               >
                 <Typography

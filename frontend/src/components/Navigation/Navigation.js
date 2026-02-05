@@ -11,7 +11,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -45,6 +44,7 @@ import {
 } from "../../features/application/applicationSlice";
 import styled from "@emotion/styled";
 import { NavBreadcrumbs } from "../NavBreadcrumbs/NavBreadcrumbs";
+import logo from "../../assets/logo_no_text.png"
 
 const SmallAvatar = styled(Avatar)(({ theme }) => ({
   width: 22,
@@ -187,22 +187,9 @@ export const Navigation = ({
               component={RouterLink}
               to={"/"}
             >
-              <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-              <Typography
-                variant="h6"
-                noWrap
-                sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                LOGO
-              </Typography>
+              <Container className="navLogoContainer">
+                <img src={logo} alt="logo" className="navLogo" />
+              </Container>
             </Link>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -216,33 +203,6 @@ export const Navigation = ({
                 <MenuIcon />
               </IconButton>
             </Box>
-
-            <Link
-              sx={{
-                display: { xs: "flex", md: "none" },
-                color: "#fff",
-              }}
-              component={RouterLink}
-              to={"/"}
-            >
-              <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-              <Typography
-                variant="h5"
-                noWrap
-                sx={{
-                  mr: 2,
-                  display: { xs: "flex", md: "none" },
-                  flexGrow: 1,
-                  fontFamily: "monospace",
-                  fontWeight: 700,
-                  letterSpacing: ".3rem",
-                  color: "inherit",
-                  textDecoration: "none",
-                }}
-              >
-                LOGO
-              </Typography>
-            </Link>
 
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <Button
@@ -378,14 +338,14 @@ export const Navigation = ({
                     to="/me"
                     onClick={handleCloseUserMenu}
                   >
-                    <Typography textAlign="center">Profil</Typography>
+                    <Typography textAlign="center">Profi</Typography>
                   </MenuItem>
                   <MenuItem
                     component={RouterLink}
-                    to="/me/bestellungen"
+                    to="/me/orders"
                     onClick={handleCloseUserMenu}
                   >
-                    <Typography textAlign="center">Bestellungen</Typography>
+                    <Typography textAlign="center">Orders</Typography>
                   </MenuItem>
                   <MenuItem
                     onClick={() => {

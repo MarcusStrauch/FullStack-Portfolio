@@ -197,7 +197,7 @@ export const CartPage = ({ logInStatus, cart, mergeCartStatus }) => {
                             </Button>
                           </ButtonGroup>
                           <Typography sx={{ textAlign: "right" }}>
-                            Summe: {centToEur(item.total)}
+                            Sum: {centToEur(item.total)}
                           </Typography>
                         </Box>
                       </Grid>
@@ -229,7 +229,7 @@ export const CartPage = ({ logInStatus, cart, mergeCartStatus }) => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Typography>Gesamt:</Typography>
+                  <Typography>Total:</Typography>
                   <Typography>
                     {centToEur(
                       cartItems.reduce(
@@ -254,7 +254,7 @@ export const CartPage = ({ logInStatus, cart, mergeCartStatus }) => {
                     fontSize: "1.2rem",
                   }}
                 >
-                  Zur Kasse
+                  Checkout
                 </Button>
                 {!logInStatus.loggedIn && (
                   <Button

@@ -1,0 +1,18 @@
+.navLogo {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+.navLogo:hover {
+    transform: scale(1.1);
+}
+
+.navLogoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}

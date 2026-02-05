@@ -10,7 +10,7 @@ export const ProductsPage = () => {
 
   return (
     <Container sx={{ mt: 2 }}>
-      <Paper sx={{ width: "100%", p: 2 }} elevation={4}>
+      <Paper sx={{ width: "100%", p: 2, mb: 5 }} elevation={4}>
         {categories.map((category) => {
           return (
             <div key={category.productCategoryId} className="productListContainer">

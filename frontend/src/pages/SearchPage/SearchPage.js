@@ -55,7 +55,7 @@ export const SearchPage = ({ productCategories }) => {
                               <Grid item xs={6} sm={12}>
                                 <img
                                   src={product?.images?.main}
-                                  alt="xf"
+                                  alt={product?.name}
                                   style={{
                                     width: "100%",
                                     height: "100%",

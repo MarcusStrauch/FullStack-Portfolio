@@ -1,7 +1,7 @@
 {
   "name": "ecommerce_portfolio",
   "version": "1.0.0",
-  "description": "A porfolio application created by Marcus Strauch, the goal is to test out and deepen my understanding of backend-development including Node, Express, Postgres and Swagger.",
+  "description": "A porfolio application created by Marcus Strauch",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
