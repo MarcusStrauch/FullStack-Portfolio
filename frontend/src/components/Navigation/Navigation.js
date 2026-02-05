@@ -183,7 +183,7 @@ export const Navigation = ({
             disableGutters
           >
             <Link
-              sx={{ position: "absolute", top: "6px", display: { xs: "none", md: "flex" }, color: "#fff" }}
+              sx={{ position: "absolute", top: "4px", display: { xs: "none", md: "flex" }, color: "#fff" }}
               component={RouterLink}
               to={"/"}
             >
@@ -207,7 +207,7 @@ export const Navigation = ({
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <Button
                 onClick={handleOpenProductMenu}
-                sx={{ position: "relative", left: "100px", my: 2, color: "white", display: "block" }}
+                sx={{ position: "relative", left: "120px", my: 2, color: "white", display: "block" }}
               >
                 Products
               </Button>
