@@ -17,10 +17,10 @@ import { OrdersPage } from "./pages/OrdersPage/OrdersPage";
 import { ProductsPage } from "./pages/ProductsPage/ProductsPage";
 import { CategoryPage } from "./pages/CategoryPage/CategoryPage";
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline, createTheme } from "@mui/material";
+import { Backdrop, CssBaseline, createTheme } from "@mui/material";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { loadProducts } from "./features/product/productSliceThunks";
-import { selectProductCategories } from "./features/product/productSlice";
+import { selectGetProductsStatus, selectProductCategories } from "./features/product/productSlice";
 import { useAppbarHeight } from "./utils/utils";
 import { AnimatePresence } from "framer-motion";
 import { authorizeSession } from "./features/user/userSliceThunks";
@@ -44,6 +44,7 @@ function App() {
   const user = useSelector(selectUser);
   const cart = useSelector(selectCart);
   const productCategories = useSelector(selectProductCategories);
+  const getProductStatus = useSelector(selectGetProductsStatus);
 
   const appbarHeight = useAppbarHeight();
 
@@ -92,6 +93,12 @@ function App() {
           : {}
       }
     >
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={true || getProductStatus.pending}
+      >
+        <div>Loading...</div>
+      </Backdrop>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <ThemeProvider theme={theme}>
           <CssBaseline />

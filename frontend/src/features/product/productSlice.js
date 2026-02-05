@@ -88,5 +88,6 @@ export const searchProductsByTitle = createSelector(
 
 export const selectProducts = (state) => state.product.product;
 export const selectProductCategories = (state) => state.product.productCategory;
+export const selectGetProductsStatus = (state) => state.product.getProductsStatus;
 
 export default productSlice.reducer;

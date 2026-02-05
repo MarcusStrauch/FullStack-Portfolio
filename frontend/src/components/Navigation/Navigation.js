@@ -187,9 +187,9 @@ export const Navigation = ({
               component={RouterLink}
               to={"/"}
             >
-              <Container className="navLogoContainer">
+              <div className="navLogoContainer">
                 <img src={logo} alt="logo" className="navLogo" />
-              </Container>
+              </div>
             </Link>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
