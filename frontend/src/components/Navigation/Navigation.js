@@ -175,7 +175,10 @@ export const Navigation = ({
       <AppBar
         id="appBar"
         position="sticky"
-        sx={{ zIndex: theme.zIndex.drawer + 1 }}
+        elevation={4}
+        sx={{
+          overflow: "visible",
+        }}
       >
         <Container maxWidth="xl">
           <Toolbar
@@ -188,8 +191,6 @@ export const Navigation = ({
           >
             <Link
               sx={{
-                position: "absolute",
-                top: "4px",
                 display: { xs: "none", md: "flex" },
                 color: "#fff",
                 boxShadow: "none",
@@ -203,22 +204,6 @@ export const Navigation = ({
                 </div>
               </div>
             </Link>
-            <Box
-              sx={{
-                position: "absolute",
-                top: "4px",
-                display: {
-                  xs: "none",
-                  md: "flex",
-                  width: "70px",
-                  height: "70px",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  background: "rgb(99, 74, 63)",
-                  zIndex: 1,
-                },
-              }}
-            ></Box>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
