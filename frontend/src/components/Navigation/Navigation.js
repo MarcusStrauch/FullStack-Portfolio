@@ -197,8 +197,10 @@ export const Navigation = ({
               component={RouterLink}
               to={"/"}
             >
-              <div className="navLogoContainer" style={{ boxShadow: "inherit" }}>
-                <img src={logo} alt="logo" className="navLogo" />
+              <div className="navLogoContainer">
+                <div className="navLogoClip">
+                  <img src={logo} alt="logo" className="navLogo" />
+                </div>
               </div>
             </Link>
             <Box
