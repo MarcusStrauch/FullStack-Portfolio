@@ -10,7 +10,6 @@ import woodstack_logo from "../../assets/woodstack_logo.png";
 
 const landingPageScrollContainerStyles = {
   scrollSnapAlign: "start",
-  height: "30vh",
   width: "100vw",
   padding: "0",
   margin: "0 auto",
@@ -39,6 +38,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
           className="landingPageScrollContainer"
           sx={{
             ...landingPageScrollContainerStyles,
+            height: "calc(100vh - 140px)",
             borderBottom: "4px solid",
           }}
         >
@@ -98,6 +98,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
             ...landingPageScrollContainerStyles,
             borderBottom: "4px solid",
             padding: "10px",
+            height: "calc(100vh - 140px)",
           }}
         >
           <img src={woodstack_logo} alt="Holzarsenal logo" className="woodstackLogoLanding" />
@@ -133,6 +134,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               elevation={18}
               sx={{
                 ...landingPageScrollContainerStyles,
+                height: "35vh",
                 borderBottom:
                   index === productCategories.length - 1 ? "" : "4px solid",
               }}
@@ -154,36 +156,21 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
                   height: "calc(20vh)",
                 }}
               >
-                <Typography
-                  variant="h2"
-                  sx={{
-                    color: "#fff",
-                    fontSize: "2rem",
-                    fontWeight: "700",
-                    mb: "10px",
-                    textDecoration: "underline",
-                  }}
-                >
-                  {category.title}
-                </Typography>
-                <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
-                  {category.description}
-                </Typography>
                 <Button
                   variant="contained"
                   component={RouterLink}
                   to={`/products/${category.name}`}
                   sx={{
                     fontSize: "1.5rem",
-                    position: "absolute",
-                    bottom: "60px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
                   }}
                 >
                   <ArrowRightIcon fontSize="large" />
                   {category.title}
                 </Button>
+                <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
+                  {category.description}
+                </Typography>
+
               </Box>
             </Container>
           ))}
