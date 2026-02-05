@@ -151,7 +151,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
                 sx={{
                   position: "relative",
                   margin: "20px",
-                  padding: "10px",
+                  padding: "25px",
                   background: "#00000075",
                   height: "calc(20vh)",
                 }}
@@ -162,6 +162,7 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
                   to={`/products/${category.name}`}
                   sx={{
                     fontSize: "1.5rem",
+                    mb: 1,
                   }}
                 >
                   <ArrowRightIcon fontSize="large" />
