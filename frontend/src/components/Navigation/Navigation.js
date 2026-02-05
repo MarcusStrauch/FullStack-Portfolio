@@ -192,11 +192,12 @@ export const Navigation = ({
                 top: "4px",
                 display: { xs: "none", md: "flex" },
                 color: "#fff",
+                boxShadow: "none",
               }}
               component={RouterLink}
               to={"/"}
             >
-              <div className="navLogoContainer">
+              <div className="navLogoContainer" style={{ boxShadow: "inherit" }}>
                 <img src={logo} alt="logo" className="navLogo" />
               </div>
             </Link>
