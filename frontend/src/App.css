@@ -1,7 +1,7 @@
 .navLogo {
     cursor: pointer;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 .navLogo:hover {
@@ -12,7 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid #fff;
     border-radius: 50%;
     overflow: hidden;
+    background: rgb(99, 74, 63);
+    background: radial-gradient(circle, rgba(99, 74, 63, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    padding: 4px;
+    margin: 0;
 }

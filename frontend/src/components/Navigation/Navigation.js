@@ -179,11 +179,11 @@ export const Navigation = ({
       >
         <Container maxWidth="xl">
           <Toolbar
-            sx={{ display: "flex", justifyContent: "space-between" }}
+            sx={{ position: "relative", display: "flex", justifyContent: "space-between" }}
             disableGutters
           >
             <Link
-              sx={{ display: { xs: "none", md: "flex" }, color: "#fff" }}
+              sx={{ position: "absolute", top: "5px", display: { xs: "none", md: "flex" }, color: "#fff" }}
               component={RouterLink}
               to={"/"}
             >
@@ -207,7 +207,7 @@ export const Navigation = ({
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <Button
                 onClick={handleOpenProductMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ position: "relative", left: "100px", my: 2, color: "white", display: "block" }}
               >
                 Products
               </Button>
