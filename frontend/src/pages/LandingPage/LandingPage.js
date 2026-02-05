@@ -10,7 +10,7 @@ import woodstack_logo from "../../assets/woodstack_logo.png";
 
 const landingPageScrollContainerStyles = {
   scrollSnapAlign: "start",
-  height: "calc(100vh - 140px)",
+  height: "30vh",
   width: "100vw",
   padding: "0",
   margin: "0 auto",
