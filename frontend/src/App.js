@@ -17,10 +17,21 @@ import { OrdersPage } from "./pages/OrdersPage/OrdersPage";
 import { ProductsPage } from "./pages/ProductsPage/ProductsPage";
 import { CategoryPage } from "./pages/CategoryPage/CategoryPage";
 import { ThemeProvider } from "@emotion/react";
-import { Backdrop, CircularProgress, Container, CssBaseline, Paper, Typography, createTheme } from "@mui/material";
+import {
+  Backdrop,
+  CircularProgress,
+  Container,
+  CssBaseline,
+  Paper,
+  Typography,
+  createTheme,
+} from "@mui/material";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { loadProducts } from "./features/product/productSliceThunks";
-import { selectGetProductsStatus, selectProductCategories } from "./features/product/productSlice";
+import {
+  selectGetProductsStatus,
+  selectProductCategories,
+} from "./features/product/productSlice";
 import { useAppbarHeight } from "./utils/utils";
 import { AnimatePresence } from "framer-motion";
 import { authorizeSession } from "./features/user/userSliceThunks";
@@ -98,7 +109,11 @@ function App() {
         open={true || getProductStatus.pending}
       >
         <Paper sx={{ p: 2 }}>
-          <Typography>Loading...</Typography>
+          <Typography>Waiting for Backend response...</Typography>
+          <Typography>
+            This is a portfolio project, as such, the backend is hosted on a
+            free tier of Render, and needs a few seconds to start up.
+          </Typography>
           <Container sx={{ mt: 2 }}>
             <CircularProgress />
           </Container>
@@ -150,10 +165,7 @@ function App() {
               >
                 <Route path="me">
                   <Route index element={<ProfilePage user={user} />} />
-                  <Route
-                    path="orders"
-                    element={<OrdersPage user={user} />}
-                  />
+                  <Route path="orders" element={<OrdersPage user={user} />} />
                 </Route>
                 <Route
                   path="checkout"
