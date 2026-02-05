@@ -183,7 +183,7 @@ export const Navigation = ({
             disableGutters
           >
             <Link
-              sx={{ position: "absolute", top: "5px", display: { xs: "none", md: "flex" }, color: "#fff" }}
+              sx={{ position: "absolute", top: "6px", display: { xs: "none", md: "flex" }, color: "#fff" }}
               component={RouterLink}
               to={"/"}
             >
