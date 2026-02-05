@@ -44,7 +44,7 @@ import {
 } from "../../features/application/applicationSlice";
 import styled from "@emotion/styled";
 import { NavBreadcrumbs } from "../NavBreadcrumbs/NavBreadcrumbs";
-import logo from "../../assets/logo_no_text.png"
+import logo from "../../assets/logo_no_text.png";
 
 const SmallAvatar = styled(Avatar)(({ theme }) => ({
   width: 22,
@@ -179,11 +179,20 @@ export const Navigation = ({
       >
         <Container maxWidth="xl">
           <Toolbar
-            sx={{ position: "relative", display: "flex", justifyContent: "space-between" }}
+            sx={{
+              position: "relative",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
             disableGutters
           >
             <Link
-              sx={{ position: "absolute", top: "4px", display: { xs: "none", md: "flex" }, color: "#fff" }}
+              sx={{
+                position: "absolute",
+                top: "4px",
+                display: { xs: "none", md: "flex" },
+                color: "#fff",
+              }}
               component={RouterLink}
               to={"/"}
             >
@@ -191,6 +200,22 @@ export const Navigation = ({
                 <img src={logo} alt="logo" className="navLogo" />
               </div>
             </Link>
+            <Box
+              sx={{
+                position: "absolute",
+                top: "4px",
+                display: {
+                  xs: "none",
+                  md: "flex",
+                  width: "70px",
+                  height: "70px",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                  background: "rgb(99, 74, 63)",
+                  zIndex: 1,
+                },
+              }}
+            ></Box>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
@@ -207,7 +232,13 @@ export const Navigation = ({
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <Button
                 onClick={handleOpenProductMenu}
-                sx={{ position: "relative", left: "120px", my: 2, color: "white", display: "block" }}
+                sx={{
+                  position: "relative",
+                  left: "120px",
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                }}
               >
                 Products
               </Button>
@@ -357,7 +388,7 @@ export const Navigation = ({
                               setSnackbarStatus({
                                 message: "Logged out!",
                                 type: "success",
-                              })
+                              }),
                             );
                           }
                         })
@@ -366,7 +397,7 @@ export const Navigation = ({
                             setSnackbarStatus({
                               message: "Error while logging out",
                               type: "error",
-                            })
+                            }),
                           );
                         });
                       handleCloseUserMenu();

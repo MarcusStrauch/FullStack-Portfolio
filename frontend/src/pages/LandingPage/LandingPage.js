@@ -101,16 +101,23 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
             height: "calc(100vh - 140px)",
           }}
         >
-          <img src={woodstack_logo} alt="Holzarsenal logo" className="woodstackLogoLanding" />
+          <img
+            src={woodstack_logo}
+            alt="Holzarsenal logo"
+            className="woodstackLogoLanding"
+          />
           <Typography
             sx={{ textAlign: "center", fontSize: "1.15rem", padding: "0 10px" }}
           >
             Glue?
-            <br />Adhesive?
+            <br />
+            Adhesive?
             <br />A nourishing oil for your kitchen table?
             <br />A beautifully handcrafted stool?
-            <br />A unique and practical lamp? 
-            <br />Or perhaps a small frame or a creative DIY gift for someone you love?
+            <br />A unique and practical lamp?
+            <br />
+            Or perhaps a small frame or a creative DIY gift for someone you
+            love?
           </Typography>
           <Typography
             sx={{
@@ -174,7 +181,6 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
                 <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
                   {category.description}
                 </Typography>
-
               </Box>
             </Container>
           ))}
