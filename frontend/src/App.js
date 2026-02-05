@@ -22,6 +22,7 @@ import {
   CircularProgress,
   Container,
   CssBaseline,
+  Divider,
   Paper,
   Typography,
   createTheme,
@@ -106,15 +107,16 @@ function App() {
     >
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 2 }}
-        open={true || getProductStatus.pending}
+        open={getProductStatus.pending}
       >
-        <Paper sx={{ p: 2 }}>
-          <Typography>Waiting for Backend response...</Typography>
+        <Paper sx={{ p: 2, width: 300 }}>
+          <Typography sx={{mb: 1}}>Waiting for Backend response...</Typography>
           <Typography>
-            This is a portfolio project, as such, the backend is hosted on a
+            This is a portfolio project. As such, the backend is hosted on a
             free tier of Render, and needs a few seconds to start up.
           </Typography>
-          <Container sx={{ mt: 2 }}>
+          <Divider sx={{ mt: 1 }} />
+          <Container sx={{ mt: 2, mb: 2, display: "flex", justifyContent: "center" }}>
             <CircularProgress />
           </Container>
         </Paper>
