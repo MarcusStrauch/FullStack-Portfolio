@@ -1,20 +1,11 @@
 .navLogo {
   cursor: pointer;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   transition: all 0.2s ease-in-out;
 }
 
 .navLogo:hover {
   transform: scale(1.1);
-}
-
-.navLogoContainer {
-  position: relative;
-  top: 18px; 
-  background: rgb(99, 74, 63);
-  border-radius: 50%;
-  padding: 10px;
-  z-index: 1;
-  box-shadow: none;
+  filter: brightness(1.1);
 }
