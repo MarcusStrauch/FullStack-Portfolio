@@ -4,11 +4,9 @@
 }
 
 .navLogoContainer {
+  background: #cccccc;
+  border-radius: 50%;
   transition: all 0.2s ease-in-out;
-  color: "#fff";
-  box-shadow: "none";
-  background: "#cccccc";
-  border-radius: "50%",
 }
 
 .navLogoContainer:hover {
