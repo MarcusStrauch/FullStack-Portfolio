@@ -200,10 +200,11 @@ export const Navigation = ({
                 <IconButton
                   size="large"
                   edge="start"
-                  color="inherit"
                   aria-label="home"
+                  variant="outlined"
                 >
-                  <img src={logo} alt="logo" className="navLogo" />
+                  <Avatar src={logo} alt="logo" />
+                  {/* <img src={logo} alt="logo" className="navLogo" /> */}
                 </IconButton>
               </Link>
             </Tooltip>
