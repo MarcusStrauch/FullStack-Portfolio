@@ -372,7 +372,7 @@ export const Navigation = ({
                     to="/me"
                     onClick={handleCloseUserMenu}
                   >
-                    <Typography textAlign="center">Profi</Typography>
+                    <Typography textAlign="center">Profile</Typography>
                   </MenuItem>
                   <MenuItem
                     component={RouterLink}
