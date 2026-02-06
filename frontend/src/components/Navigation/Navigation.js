@@ -192,8 +192,9 @@ export const Navigation = ({
             <Link
               sx={{
                 display: { xs: "none", md: "flex" },
-                p: 1,
-                ml: 2
+                p: 0.5,
+                ml: 2,
+                my: 0.5,
               }}
               className="navLogoContainer"
               component={RouterLink}
