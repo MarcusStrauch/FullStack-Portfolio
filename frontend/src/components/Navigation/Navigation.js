@@ -199,14 +199,24 @@ export const Navigation = ({
               to={"/"}
             >
               <Tooltip title="Home">
-                <IconButton
-                  size="large"
+                <Button
+                  size="medium"
                   aria-label="home"
                   variant="contained"
+                  sx={{
+                    minWidth: 0,
+                    padding: 1,
+                    borderRadius: "50%",
+                  }}
                 >
-                  <Avatar src={logo} alt="logo" />
+                  <Box
+                    component="img"
+                    src={logo}
+                    alt="Logo"
+                    // sx={{ width: 24, height: 24 }}
+                  />
                   {/* <img src={logo} alt="logo" className="navLogo" /> */}
-                </IconButton>
+                </Button>
               </Tooltip>
             </Link>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
