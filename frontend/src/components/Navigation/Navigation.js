@@ -204,7 +204,7 @@ export const Navigation = ({
                   aria-label="home"
                   variant="contained"
                   sx={{
-                    backgroundColor: "#b1b1b1a1",
+                    backgroundColor: "#ababab36",
                     minWidth: 0,
                     padding: 1,
                     borderRadius: "50%",
