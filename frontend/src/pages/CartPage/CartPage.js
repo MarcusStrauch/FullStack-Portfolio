@@ -117,7 +117,7 @@ export const CartPage = ({ logInStatus, cart, mergeCartStatus }) => {
                             onClick={() => handleRemoveItem(item)}
                           >
                             <DeleteIcon sx={{ mr: 0.4 }} />
-                            Entfernen
+                            Remove
                           </Button>
                         </Box>
                       </Grid>

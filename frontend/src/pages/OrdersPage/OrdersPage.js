@@ -26,7 +26,7 @@ export const OrdersPage = ({ user }) => {
       {orders.map((order) => (
         <Paper key={order.orderId} sx={{ p: 2, my: 2 }}>
           <Typography variant="h5" component="h2">
-            Bestellung vom {new Date(order.created).toLocaleString("de-DE")}
+            Order placed on {new Date(order.created).toLocaleString("de-DE")}
           </Typography>
           <Divider sx={{ mb: 2 }} />
           <Grid container spacing={2}>
