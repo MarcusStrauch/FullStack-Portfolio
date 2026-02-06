@@ -166,7 +166,7 @@ export const Navigation = ({
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchTerm) {
-      navigate(`/suche/?q=${searchTerm}`);
+      navigate(`/search/?q=${searchTerm}`);
     }
   };
 
