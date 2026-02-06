@@ -189,27 +189,26 @@ export const Navigation = ({
             }}
             disableGutters
           >
-            <Tooltip title="Home">
-              <Link
-                sx={{
-                  display: { xs: "none", md: "flex" },
-                  my: 0.5,
-                  ml: 2,
-                }}
-                component={RouterLink}
-                to={"/"}
-              >
-                <IconButton
+            <Link
+              sx={{
+                display: { xs: "none", md: "flex" },
+                my: 0.5,
+                ml: 2,
+              }}
+              component={RouterLink}
+              to={"/"}
+            >
+              <Tooltip title="Home">
+                <Button
                   size="large"
-                  edge="start"
                   aria-label="home"
                   variant="outlined"
                 >
                   <Avatar src={logo} alt="logo" />
                   {/* <img src={logo} alt="logo" className="navLogo" /> */}
-                </IconButton>
-              </Link>
-            </Tooltip>
+                </Button>
+              </Tooltip>
+            </Link>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
