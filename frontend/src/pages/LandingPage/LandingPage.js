@@ -157,13 +157,14 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
               />
               <Box
                 component={Paper}
-                elevation={4}
+                elevation={5}
                 sx={{
                   margin: "20px",
                   padding: "25px",
                   width: "100%",
                   background: "#00000075",
                   height: "20vh",
+                  zIndex: 1,
                 }}
               >
                 <Button

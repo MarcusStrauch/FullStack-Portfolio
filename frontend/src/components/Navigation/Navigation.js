@@ -194,6 +194,7 @@ export const Navigation = ({
                 display: { xs: "none", md: "flex" },
                 color: "#fff",
                 boxShadow: "none",
+                ml: 2,
               }}
               component={RouterLink}
               to={"/"}
@@ -217,8 +218,6 @@ export const Navigation = ({
               <Button
                 onClick={handleOpenProductMenu}
                 sx={{
-                  position: "relative",
-                  left: "120px",
                   my: 2,
                   color: "white",
                   display: "block",
