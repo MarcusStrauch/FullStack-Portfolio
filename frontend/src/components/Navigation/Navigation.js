@@ -193,6 +193,8 @@ export const Navigation = ({
               <Link
                 sx={{
                   display: { xs: "none", md: "flex" },
+                  my: 0.5,
+                  ml: 2,
                 }}
                 component={RouterLink}
                 to={"/"}
