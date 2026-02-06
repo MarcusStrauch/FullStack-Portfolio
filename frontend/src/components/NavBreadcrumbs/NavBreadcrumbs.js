@@ -24,7 +24,7 @@ export const NavBreadcrumbs = ({ location, productCategories }) => {
     login: "Log In",
     signup: "Sign Up",
     search: "Search",
-    Orders: "Orders",
+    orders: "Orders",
     checkout: "Checkout",
   });
 
