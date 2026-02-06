@@ -195,6 +195,8 @@ export const Navigation = ({
                 color: "#fff",
                 boxShadow: "none",
                 ml: 2,
+                background: "#cccccc",
+                p: 2,
               }}
               component={RouterLink}
               to={"/"}
@@ -219,6 +221,7 @@ export const Navigation = ({
                 onClick={handleOpenProductMenu}
                 sx={{
                   my: 2,
+                  ml: 2,
                   color: "white",
                   display: "block",
                 }}
