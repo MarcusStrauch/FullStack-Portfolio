@@ -204,6 +204,7 @@ export const Navigation = ({
                   aria-label="home"
                   variant="contained"
                   sx={{
+                    backgroundColor: "#b1b1b1a1",
                     minWidth: 0,
                     padding: 1,
                     borderRadius: "50%",
@@ -213,7 +214,7 @@ export const Navigation = ({
                     component="img"
                     src={logo}
                     alt="Logo"
-                    // sx={{ width: 24, height: 24 }}
+                    sx={{ width: "40px", height: "40px" }}
                   />
                   {/* <img src={logo} alt="logo" className="navLogo" /> */}
                 </Button>
