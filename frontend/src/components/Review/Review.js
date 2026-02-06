@@ -40,7 +40,7 @@ export const Review = ({
           >
             <ListItemText
               primary={product.name}
-              secondary={`Menge: ${product.quantity}`}
+              secondary={`Amount: ${product.quantity}`}
               sx={{ pr: 4 }}
             />
             <Typography variant="body2">{centToEur(product.total)}</Typography>

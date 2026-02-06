@@ -48,7 +48,7 @@ export const OrdersPage = ({ user }) => {
                     </Grid>
                     <Grid item xs={8} md={7}>
                       <Typography>{product.name}</Typography>
-                      <Typography>Menge: {product.quantity}</Typography>
+                      <Typography>Amount: {product.quantity}</Typography>
                     </Grid>
                   </Grid>
                 </Box>
