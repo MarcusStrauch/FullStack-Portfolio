@@ -245,17 +245,17 @@ export const Navigation = ({
                 Products
               </Button>
               <Menu
-                sx={{ mt: "45px" }}
+                sx={{ mt: 1 }}
                 id="menu-appbar"
                 anchorEl={anchorElProducts}
                 anchorOrigin={{
                   vertical: "top",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 open={Boolean(anchorElProducts)}
                 onClose={handleCloseProductMenu}
