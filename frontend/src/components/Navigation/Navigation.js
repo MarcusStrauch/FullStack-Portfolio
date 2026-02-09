@@ -242,7 +242,6 @@ export const Navigation = ({
                   color: "white",
                   display: "block",
                 }}
-                endIcon={expandProducts ? <ExpandLess /> : <ExpandMore />}
                 size="large"
               >
                 Products
