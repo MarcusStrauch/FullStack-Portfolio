@@ -102,7 +102,7 @@ export const SearchPage = ({ productCategories }) => {
     <Container component="main" maxWidth="lg">
       <Paper sx={{ p: 2, mt: 2 }}>
         <Typography>
-          Für die Suche nach "{searchTerm}" wurden keine Treffer gefunden.
+          No results found for the search term "{searchTerm}".
         </Typography>
       </Paper>
     </Container>

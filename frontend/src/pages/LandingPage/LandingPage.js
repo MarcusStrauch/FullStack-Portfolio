@@ -9,7 +9,6 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import woodstack_logo from "../../assets/woodstack_logo.png";
 
 const landingPageScrollContainerStyles = {
-  scrollSnapAlign: "start",
   width: "100vw",
   padding: "0",
   margin: "0 auto",
@@ -26,7 +25,6 @@ export const LandingPage = ({ productCategories, appbarHeight }) => {
           width: "100vw",
           height: `calc(100vh - ${appbarHeight}px)`,
           padding: "0",
-          scrollSnapType: "y mandatory",
           scrollMargin: "20px",
           overflow: "scroll",
         }}
