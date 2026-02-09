@@ -8,11 +8,11 @@ export const loadProducts = createAsyncThunk(
       const result = await Promise.all([getProductCategories(), getProducts()]);
 
       if (!result.ok) {
-        rejectWithValue("wow");
+        rejectWithValue("Loading products failed.");
       }
 
       if (!result[0].productCatArr.length && !result[1].productArr.length) {
-        rejectWithValue("ehhe")
+        rejectWithValue("No products or categories found.");
       } 
 
       return { categories: result[0], products: result[1] };
