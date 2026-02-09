@@ -19,7 +19,7 @@ export const addItemsToUserCart = createAsyncThunk(
         dispatch(mergeUserCart())
           .unwrap()
           .then((result) => {
-            console.log(result);
+            
           });
       }
 
@@ -30,7 +30,7 @@ export const addItemsToUserCart = createAsyncThunk(
 );
 
 export const mergeUserCart = createAsyncThunk(
-  "cart/getUserCart",
+  "cart/mergeUserCart",
   async (_, { rejectWithValue, getState, dispatch }) => {
     try {
       const state = getState();

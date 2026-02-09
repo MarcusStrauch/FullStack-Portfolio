@@ -237,11 +237,13 @@ export const Navigation = ({
               <Button
                 onClick={handleOpenProductMenu}
                 sx={{
-                  my: 2,
+                  my: 1,
                   ml: 2,
                   color: "white",
                   display: "block",
                 }}
+                endIcon={expandProducts ? <ExpandLess /> : <ExpandMore />}
+                size="large"
               >
                 Products
               </Button>

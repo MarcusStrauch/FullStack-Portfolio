@@ -269,7 +269,7 @@ export const CartPage = ({ logInStatus, cart, mergeCartStatus }) => {
                       fontSize: "1.2rem",
                     }}
                   >
-                    Bitte einloggen
+                    Log In
                   </Button>
                 )}
               </Paper>

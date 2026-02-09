@@ -8,8 +8,6 @@ import { Typography } from "@mui/material";
 export const ProductsPage = () => {
   const categories = useSelector(selectProductCategories);
 
-  console.log(categories);
-
   return (
     <Container sx={{ mt: 2 }}>
       <Paper sx={{ width: "100%", p: 2, mb: 5 }} elevation={4}>
