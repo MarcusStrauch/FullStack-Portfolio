@@ -249,12 +249,12 @@ export const Navigation = ({
                 id="menu-appbar"
                 anchorEl={anchorElProducts}
                 anchorOrigin={{
-                  vertical: "top",
+                  vertical: "bottom",
                   horizontal: "left",
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: "top",
+                  vertical: "bottom",
                   horizontal: "left",
                 }}
                 open={Boolean(anchorElProducts)}
