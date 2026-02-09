@@ -245,7 +245,7 @@ export const Navigation = ({
                 Products
               </Button>
               <Menu
-                sx={{ mt: 3 }}
+                sx={{ mt: 5 }}
                 id="menu-appbar"
                 anchorEl={anchorElProducts}
                 anchorOrigin={{
